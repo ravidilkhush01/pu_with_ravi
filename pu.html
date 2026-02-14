@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panjab University</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.top-header{
+    background:#ffffff;
+    display:flex;
+    align-items:center;
+    padding:15px 40px;
+}
+
+.logo{
+    width:80px;
+    margin-right:15px;
+}
+
+.title h1{
+    color:#c4001a;
+    font-size:32px;
+    letter-spacing:1px;
+}
+
+.title p{
+    font-size:14px;
+    color:#444;
+}
+
+/* NAVBAR */
+nav{
+    background:#c4001a;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    justify-content:center;
+}
+
+nav ul li{
+    padding:10px 20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    font: size 13px;
+}
+
+nav ul li:hover{
+    background:#211e1f;
+}
+
+.admission{
+    background:rgb(255, 26, 26);
+}
+
+/* BANNER */
+.banner{
+    height:auto;
+    width: 360px;
+    background:url('try.png') center/cover no-repeat;
+}
+
+/* RANKING SECTION */
+.ranking{
+    background:#fffbfb;
+    padding:20px;
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:#ffffff;
+    width:280px;
+    padding:15px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    border:1px solid #ddd;
+}
+
+.card img{
+    width:55px;
+}
+
+.card h3{
+    font-size:16px;
+    margin-bottom:5px;
+}
+
+.card p{
+    font-size:14px;
+    color:#b9b9b9;
+}
+.mission-section{
+    display: flex;
+    gap: 26px;
+    padding: 40px 80px;
+}
+.mission-left{
+    background:#c4001a;
+    color: #ffffff;
+    padding: 40px;
+    border-radius: 6px;
+    width:50%;
+
+}
+.mission-left h2{
+    line-height: 1.7;
+    text-align: justify;
+}
+.mission-left h3{
+    margin-bottom: 20;
+    font-weight:normal;
+}
+.mission-left p{
+    line-height: 1.7;
+    text-align: justify;
+}
+/*Right Box*/
+.mission-right{
+    background: #eee;
+    padding: 25px;
+    border-radius: 6px;
+    width: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0,1);
+}
+.mission-right img{
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+.quote{
+    color: #211e1f;
+    font-style: italic;
+    line-height: 2;
+}
+.author{
+    text-align: right;
+    margin: top 10px;
+    font-weight: bold;
+}
+.banner-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* Section */
+.quick-facts {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+/* Title */
+.title {
+    color: #c4001a;
+    font-size: 28px;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+/* Grid Layout */
+.facts-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Cards */
+.fact-card {
+    padding: 30px;
+    border-radius: 8px;
+    font-size: 15px;
+    line-height: 1.6;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Red Card */
+.red {
+    background: #c4001a;
+    color: white;
+}
+
+/* White Card */
+.white {
+    background: white;
+    color: #333;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .facts-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .facts-container {
+        grid-template-columns: 1fr;
+    }
+}
+body {
+    margin: 10;
+    font-family: Arial, sans-serif;
+}
+
+/* Background Section */
+.info-section {
+    display: flex;
+    width: 100%;
+    padding: 60px 40px;
+    gap: 40px;
+    background: linear-gradient(to right, #c4001a, #d9d9d9);
+}
+
+/* Left Menu */
+.left-menu {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu-item {
+    background: #f2f2f2;
+    padding: 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    color: #777;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu-item:hover {
+    background: white;
+    transform: translateX(5px);
+}
+
+.menu-item.active {
+    background: white;
+    color: #c4001a;
+    position: relative;
+}
+
+/* Arrow Effect */
+.menu-item.active::after {
+    content: "";
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: 15px solid white;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+
+/* Right Content */
+.right-content {
+    width: 75%;
+    padding-left: 40px;
+}
+
+.content-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.content-box img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+/* Responsive */
+@media(max-width: 900px) {
+    .info-section {
+        flex-direction: column;
+    }
+
+    .left-menu, .right-content {
+        width: 100%;
+    }
+
+    .right-content {
+        padding-left: 0;
+        margin-top: 30px;
+    }
+}
+.footer {
+    background: #2e2e2e;
+    width: 100%;
+    color: #ddd;
+    font-family: Arial, sans-serif;
+}
+
+/* Banner Image */
+.footer-banner img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+/* Footer Grid */
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 50px 80px;
+}
+
+.footer-col h3 {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #999;
+    padding-bottom: 5px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin: 8px 0;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.footer-col ul li:hover {
+    color: white;
+}
+
+.highlight {
+    color: yellow;
+}
+
+/* Enquiry Section */
+.footer-enquiry {
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #555;
+    font-weight: bold;
+}
+
+/* Bottom Copyright */
+.footer-bottom {
+    text-align: center;
+    padding: 12px;
+    background: #262626;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media(max-width:900px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:600px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="top-header">
+    <img src="ravi.png" class="logo">
+    <div class="title">
+        <h1>PANJAB UNIVERSITY</h1>
+        <p>Established under the Panjab University Act VII of 1947<br>
+        enacted by the Government of India</p>
+    </div>
+</div>
+
+
+</header>
+
+<!-- NAVBAR -->
+<nav>
+<ul>
+<li><a href="#">ABOUT PU</a></li>
+<li><a href="#">OUR ADMINISTRATION</a></li>
+<li><a href="#">ACADEMICS</a></li>
+<li><a href="#">RESEARCH</a></li>
+<li><a href="#">STUDENTS</a></li>
+<li><a href="#">EXAMINATION</a></li>
+<li><a href="#">COLLABORATIONS</a></li>
+<li><a href="#">IQAC</a></li>
+<li class="admission"><a href="#">ADMISSIONS</a></li>
+</ul>
+</nav>
+<div class="banner-image">
+    <img src="try.jpg" alt="Campus Image">
+</div>
+
+<!-- RANKING SECTION -->
+<section class="ranking">
+
+<div class="card">
+<img src="rkt.jpeg">
+<div>
+<h3>NIRF Ranking 2025</h3>
+<p>35th Rank among the Indian universities</p>
+</div>
+</div>
+
+<div class="card">
+<img src="rrp.png">
+<div>
+<h3>NAAC Grading</h3>
+<p>CGPA of 3.68 on a four-point scale at A++ Grade</p>
+</div>
+</div>
+
+<div class="card">
+<img src="qs-ranking.png">
+<div>
+<h3>QS Ranking 2026</h3>
+<p>Ranked #901-950 in QS World University Rankings.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="ravia.png">
+<div>
+<h3>THE Ranking 2025</h3>
+<p>Ranked #601-800 in World University Rankings.</p>
+</div>
+</div>
+
+
+<!-- MISSION SECTION-->
+ <section class="mission-section">
+    <dir class="mission-left">
+        <h2>OUR MISSION</h2>
+        <h4>As Envisioned in Punjab University Act, 1947.</h4>
+        <p>
+         "The University shall be incorporated for the purposes, among others, of making
+provision for imparting education in Arts, Letters, Science and the learned
+professions and of furthering advancement of learning, the prosecution of
+original research, with power to appoint University Professors, Readers and
+Lecturers, to hold and manage educational endowments, to erect, equip and
+maintain University colleges, libraries, laboratories and museums..."
+        </p>
+    </dir>
+    <div class="mission-right">
+        <img src="images.jpeg" alt="jawahar lalnehru">
+
+        <p class="quote">
+         "A university stands for humanism, for tolerance, for reason, for the adventure
+of ideas and for the search of truth. It stands for the onward march of the
+human race towards ever higher objectives..."   
+        </p>
+        <p class="author">- Pandit Jawahar Lal Nehru</p>
+    </div>
+ </section>
+
+<!-- BANNER -->
+<div class="banner"></div>
+
+<div class="card-body"></div>
+
+<!-- ky -->
+ <section class="quick-facts">
+
+    <h2 class="title">QUICK FACTS</h2>
+
+    <div class="facts-container">
+
+        <div class="fact-card red">
+            Established in 1882 as University of Punjab at Lahore (now in Pakistan).
+        </div>
+
+        <div class="fact-card white">
+            Accredited with a CGPA of 3.68 on a four-point scale at A++ Grade.
+        </div>
+
+        <div class="fact-card red">
+            Ranked in 11-50 bracket in National Institutional Ranking Framework (NIRF) 2025 Innovation Category.
+        </div>
+
+        <div class="fact-card white">
+            Ranked amongst the Top 3.9% of HEIs globally by CWUR in its 2025 edition.
+        </div>
+
+        <div class="fact-card red">
+            Won the prestigious MAKA Trophy for overall top performance in University Inter-University Tournaments.
+        </div>
+
+        <div class="fact-card white">
+            Spread over an area of 550 acres in Sector 14 and Sector 25 Campus.
+        </div>
+
+        <div class="fact-card red">
+            74 well-equipped Teaching & Research Departments alongwith 15 Centres / Chairs.
+        </div>
+
+        <div class="fact-card white">
+            202 Affiliated Colleges spread over Punjab and Regional Centres.
+        </div>
+
+        <div class="fact-card red">
+            6 Constituent Colleges located at different campuses in Punjab.
+        </div>
+
+    </div>
+
+</section>
+
+<section class="info-section">
+
+    <!-- LEFT MENU -->
+    <div class="left-menu">
+
+        <div class="menu-item active">
+            <i class="fa-solid fa-burst"></i> INFORMATION
+        </div>
+
+        <div class="menu-item">
+            <i class="fa-solid fa-id-card"></i> ADMISSIONS
+        </div>
+
+        <div class="menu-item">
+            <i class="fa-solid fa-bullhorn"></i> NEWS
+        </div>
+
+        <div class="menu-item">
+            <i class="fa-solid fa-calendar"></i> EVENTS
+        </div>
+
+        <div class="menu-item">
+            <i class="fa-solid fa-users"></i> CONFERENCES
+        </div>
+
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="right-content">
+
+        <div class="content-box">
+
+            <img src="reds.png" alt="Department Poster">
+
+        </div>
+
+    </div>
+
+    <!-- fotter÷ -->
+ 
+</section>
+
+ <footer class="footer">
+
+    <!-- Top Image Banner -->
+    <div class="footer-banner">
+        <img src="76.jpg" alt="Campus Image">
+    </div>
+
+    <!-- Footer Links -->
+    <div class="footer-container">
+
+        <div class="footer-col">
+            <h3>SUPPORT & SERVICES</h3>
+            <ul>
+                <li>Public Relations</li>
+                <li>Guest House & Holiday Homes</li>
+                <li>Skill Development & Entrepreneurship</li>
+                <li>PU Cyber Wellness Clinic</li>
+                <li>Computer Centre</li>
+                <li>Publication Bureau</li>
+                <li>Industry Institute Partnership</li>
+                <li>Radio Station - Jyotirgamaya</li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>BEST PRACTICES</h3>
+            <ul>
+                <li>NIRF</li>
+                <li class="highlight">National Education Policy (NEP)</li>
+                <li>Green Policy of PU</li>
+                <li>Institutional Ethics Committee</li>
+                <li>NISP</li>
+                <li>IPR Policy</li>
+                <li>Entrepreneurship Policy</li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>INTRANET</h3>
+            <ul>
+                <li>Campus Portal</li>
+                <li>Mail @ Campus</li>
+                <li>NetPortal (WiFi)</li>
+                <li>PUNet Intranet</li>
+                <li>PU Website Map</li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>RESOURCES</h3>
+            <ul>
+                <li>PU News</li>
+                <li>RTI</li>
+                <li>Tenders</li>
+                <li>University Forms</li>
+                <li>Employment / Jobs</li>
+                <li>Telephone Directory</li>
+                <li>Directorate of Sports</li>
+            </ul>
+        </div>
+        
+
+    </div>
+
+
+    <!-- Enquiry -->
+    <div class="footer-enquiry">
+        Enquiry No(s): 1800-180-2065, +91 172 2534818, 2534866
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+        © 1997 - 2026 Panjab University, Chandigarh, India.
+    </div>
+
+</footer>
+
+</body>
+</html>
